@@ -1,10 +1,10 @@
 # Foundry + Hardhat Template [![Open in Gitpod][gitpod-badge]][gitpod] [![Github Actions][gha-badge]][gha] [![Foundry][foundry-badge]][foundry] [![Hardhat][hardhat-badge]][hardhat]
 
-[gitpod]: https://gitpod.io/#https://github.com/ahmedali8/foundry-hardhat-template
+[gitpod]: https://gitpod.io/#https://github.com/rube-de/foundry-hardhat-template
 [gitpod-badge]: https://img.shields.io/badge/Gitpod-Open%20in%20Gitpod-FFB45B?logo=gitpod
-[gha]: https://github.com/ahmedali8/foundry-hardhat-template/actions
+[gha]: https://github.com/rube-de/foundry-hardhat-template/actions
 [gha-badge]:
-  https://github.com/ahmedali8/foundry-hardhat-template/actions/workflows/ci.yml/badge.svg
+  https://github.com/rube-de/foundry-hardhat-template/actions/workflows/ci.yml/badge.svg
 [hardhat]: https://hardhat.org/
 [hardhat-badge]: https://img.shields.io/badge/Built%20with-Hardhat-FFDB1C.svg
 [foundry]: https://getfoundry.sh/
@@ -67,7 +67,7 @@ A Foundry + Hardhat based template for developing Solidity smart contracts, with
 
 ## Getting Started
 
-Click the [`Use this template`](https://github.com/ahmedali8/foundry-hardhat-template/generate)
+Click the [`Use this template`](https://github.com/rube-de/foundry-hardhat-template/generate)
 button at the top of the page to create a new repository with this repo as the initial state.
 
 Or, if you prefer to install the template manually:
@@ -75,7 +75,7 @@ Or, if you prefer to install the template manually:
 ```sh
 $ mkdir my-project
 $ cd my-project
-$ forge init --template ahmedali8/foundry-hardhat-template
+$ forge init --template rube-de/foundry-hardhat-template
 ```
 
 Then, install dependencies

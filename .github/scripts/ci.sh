@@ -4,8 +4,8 @@
 set -euo pipefail
 
 # Define the input vars
-GITHUB_REPOSITORY=${1?Error: Please pass username/repo, e.g. ahmedali8/foundry-hardhat-template}
-GITHUB_REPOSITORY_OWNER=${2?Error: Please pass username, e.g. ahmedali8}
+GITHUB_REPOSITORY=${1?Error: Please pass username/repo, e.g. rube-de/foundry-hardhat-template}
+GITHUB_REPOSITORY_OWNER=${2?Error: Please pass username, e.g. rube-de}
 GITHUB_REPOSITORY_DESCRIPTION=${3:-""} # If null then replace with empty string
 
 echo "GITHUB_REPOSITORY: $GITHUB_REPOSITORY"
@@ -31,14 +31,14 @@ sedi () {
   sed --version >/dev/null 2>&1 && sed -i -- "$@" || sed -i "" "$@"
 }
 
-# Rename instances of "ahmedali8/foundry-hardhat-template" to the new repo name in README.md for badges only
-sedi "/gitpod/ s|ahmedali8/foundry-hardhat-template|"${GITHUB_REPOSITORY}"|;" "README.md"
-sedi "/gitpod-badge/ s|ahmedali8/foundry-hardhat-template|"${GITHUB_REPOSITORY}"|;" "README.md"
-sedi "/gha/ s|ahmedali8/foundry-hardhat-template|"${GITHUB_REPOSITORY}"|;" "README.md"
-sedi "/gha-badge/ s|ahmedali8/foundry-hardhat-template|"${GITHUB_REPOSITORY}"|;" "README.md"
+# Rename instances of "rube-de/foundry-hardhat-template" to the new repo name in README.md for badges only
+sedi "/gitpod/ s|rube-de/foundry-hardhat-template|"${GITHUB_REPOSITORY}"|;" "README.md"
+sedi "/gitpod-badge/ s|rube-de/foundry-hardhat-template|"${GITHUB_REPOSITORY}"|;" "README.md"
+sedi "/gha/ s|rube-de/foundry-hardhat-template|"${GITHUB_REPOSITORY}"|;" "README.md"
+sedi "/gha-badge/ s|rube-de/foundry-hardhat-template|"${GITHUB_REPOSITORY}"|;" "README.md"
 
-# Rename instances of "ahmedali8/foundry-hardhat-template" to the new repo name in yarn.lock
-sedi "s|ahmedali8/foundry-hardhat-template|"${GITHUB_REPOSITORY}"|;" "yarn.lock"
+# Rename instances of "rube-de/foundry-hardhat-template" to the new repo name in yarn.lock
+sedi "s|rube-de/foundry-hardhat-template|"${GITHUB_REPOSITORY}"|;" "yarn.lock"
 
 # Copy README.md to GUIDE.md
 cp README.md GUIDE.md
